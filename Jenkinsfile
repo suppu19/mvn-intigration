@@ -7,9 +7,9 @@ pipeline {
             }
         }
         post {
-                always {
-                    slackSend channel: '#jenkins-intigration', message: "This build is scucess on ${JOB_NAME}-${BUILD_NUMBER}"
-                    }
+            always {
+                slackSend channel: '#jenkins-intigration', message: "This build is scucess on ${JOB_NAME}-${BUILD_NUMBER}"
             }
+        }
     }
 }
