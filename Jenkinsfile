@@ -6,10 +6,10 @@ pipeline {
                 sh "mvn clean package" 
             }
         }
-        post {
-            always {
-                slackSend channel: '#jenkins-intigration', message: "This build is scucess on ${JOB_NAME}-${BUILD_NUMBER}"
-            }
-        }
+                post {
+                    always {
+                        slackSend channel: '#jenkins-intigration', message: "This build is scucess on ${JOB_NAME}-${BUILD_NUMBER}"
+                    }
+                }
     }
 }
